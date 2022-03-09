@@ -5,7 +5,7 @@
  
  using namespace std;
 namespace ariel{
-    string mat(int a, int b, char c, char d) {
+    string mat(int a, int b, char c1, char c2) {
         
         if(a < 0 || b< 0 || a%2 == 0 || b%2 == 0 ){
             throw invalid_argument("The inputs are non positive, even or invalid");}
@@ -17,8 +17,8 @@ namespace ariel{
         // char symbol =' ';
         // while(x <= (a/2)){
         //     if(x%2 == 0){
-        //         symbol = c;
-        //     }else{ symbol = d;}
+        //         symbol = c1;
+        //     }else{ symbol = c2;}
 
         //     for(int i = x; i<a-x; i++){
         //         arr[x][i] = arr[b-x-1][i] = symbol;
@@ -28,8 +28,8 @@ namespace ariel{
 
         // while(y<=(b/2)){
         //     if(y%2 == 0){
-        //         symbol = c;
-        //     }else{ symbol = d;}
+        //         symbol = c1;
+        //     }else{ symbol = c2;}
 
         //     for(int j=y; j<b-y; j++){
         //         arr[j][y] = arr[j][a-1-y] = symbol;
