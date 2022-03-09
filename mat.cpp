@@ -11,7 +11,7 @@ namespace ariel{
             throw invalid_argument("The inputs are non positive, even or invalid");}
         
         
-
+        string str = "";
         // int x,y=0;
         // int arr[a][b];
         // char symbol =' ';
@@ -36,11 +36,16 @@ namespace ariel{
         //     }
         //     y++;
         // }
-
+        // for(int i = 0; i < a; i++){
+        //     for(int j = 0; j < b; j++){
+        //     str += arr[i][j];    }
+        //  }
+        // cout << str;
+        //return (str)
         return "";
 	}
 
-    // void printArray(){
+    // string printArray(arr[][]){
     //     for(int i = 0; i < array.length(); i++){
     //         for(int j = 0; j < array[0].length(); j++){
     //             cout<< ""<< array[i][j] <<"";
