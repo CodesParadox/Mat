@@ -39,6 +39,7 @@ namespace ariel{
         // for(int i = 0; i < a; i++){
         //     for(int j = 0; j < b; j++){
         //     str += arr[i][j];    }
+        //  cout<<"\n";
         //  }
         // cout << str;
         //return (str)
