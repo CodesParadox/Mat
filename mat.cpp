@@ -1,4 +1,3 @@
-
 #include "mat.hpp"
 #include <iostream>
 #include <string>
@@ -14,31 +13,31 @@ namespace ariel{
         string str = "";
         int x = 0;
         int y=0;
-        int arr[a][b];
+        int arr[b][a];
         char symbol =' ';
-        while(x <= (a/2)){
+        while(x <= (b/2)){
             if(x%2 == 0){
                 symbol = c1;
             }else{ symbol = c2;}
 
-            for(int i = x; i<b-x; i++){
-                arr[x][i] = arr[a-x-1][i] =symbol;
+            for(int i = x; i<a-x; i++){
+                arr[x][i] = arr[b-x-1][i] =symbol;
             }
             x++;
         }
 
-        while(y<=(b/2)){
+        while(y<=(a/2)){
             if(y%2 == 0){
                 symbol = c1;
             }else{ symbol = c2;}
 
-            for(int j=y; j<a-y; j++){
-                arr[j][y] = arr[j][b-1-y] = symbol;
+            for(int j=y; j<b-y; j++){
+                arr[j][y] = arr[j][a-1-y] = symbol;
             }
             y++;
         }
-        for(int i = 0; i < a; i++){
-            for(int j = 0; j < b; j++){
+        for(int i = 0; i < b; i++){
+            for(int j = 0; j < a; j++){
             str += arr[i][j];    }
          str+="\n";
          }
@@ -52,8 +51,8 @@ namespace ariel{
 
     int main(){
         cout<<"this is the solution"<<endl;
-        cout<<ariel::mat(13,5,'@','-') <<endl;
-        cout<<ariel::mat(9,9,'@','-') <<endl;
+        cout<<ariel::mat(9,7,'@','-') <<endl;
+       // cout<<ariel::mat(9,9,'@','-') <<endl;
         return 0;
         
     };
