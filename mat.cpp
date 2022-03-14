@@ -16,13 +16,11 @@ namespace ariel{
         if (c1 < '!' || c2 < '!' || c1 > '~' || c2 > '~') {
 		throw invalid_argument("Invalid charcters -> OUT OF RANGE");}
 
-        vector <vector<string>> NoReason2Use;
-    
-
         string str;
         int x = 0;
         int y=0;
-        string arr[b][a];
+        vector <vector<string>> arr(b, vector<string>(a));
+        //int arr[b][a];
         char symbol =' ';
         while(x <= (b/2)){
             if(x%2 == 0){
@@ -48,46 +46,34 @@ namespace ariel{
             y++;
         }
 
-            //try
-            // vector<string> k(b);
-            // for(int r=0; r<b; r++){
-            //     for(int c=0; c<a; c++){
-            //         k.push_back(arr[r][c]);
-            //     }
-            // }
-
-            // for(int i=0; i<k.size(); i++){
-            //     for(int j=0; j<k[i].size(); j++){
-            //      str+=k[i][j];
-            //      //str+=k.at(i).at(j);
-            //      }
-            //  str+="\n";
-            // }
+         
 
                 //Tell me u like 2 spend storage WITHOUT telling me you like 2 spend storage
-                for(int row=0; row<b;row++){
-                    vector<string> irelevant4beginner(b);
-                    for(int col=0; col<a; col++){
+        //          vector <vector<string>> NoReason2Use;
+        //         for(int row=0; row<b;row++){
+        //             vector<string> irelevant4beginner(b);
+        //             for(int col=0; col<a; col++){
                       
-                        irelevant4beginner.push_back(arr[row][col]);
-                    }
-                    NoReason2Use.push_back(irelevant4beginner);
-                }
+        //                 irelevant4beginner.push_back(arr[row][col]);
+        //             }
+        //             NoReason2Use.push_back(irelevant4beginner);
+        //         }
        
-        for(int i=0; i<NoReason2Use.size(); i++){
-            for(int j=0; j<NoReason2Use[i].size(); j++){
-                 str+=NoReason2Use.at(i).at(j);
-                 }
-             str+="\n";
-        }
-
-        // for(int i = 0; i < b; i++){
-        //     for(int j = 0; j < a; j++){
-        //     str += arr[i][j];  
-        //     //str+= NoReason2Use.at(i).at(j);   
-        //      }
-        //  str+="\n";
-        //  }
+        // for(int i=0; i<NoReason2Use.size(); i++){
+        //     for(int j=0; j<NoReason2Use[i].size(); j++){
+        //          str+=NoReason2Use.at(i).at(j);
+        //          }
+        //      str+="\n";
+        // }
+ 
+        for(int i = 0; i < b; i++){
+            for(int j = 0; j < a; j++){
+            str+=arr[i].at(j);
+            //str += arr[i][j];  
+            //str+= NoReason2Use.at(i).at(j);   
+             }
+         str+="\n";
+         }
         return str;
       
 	}
